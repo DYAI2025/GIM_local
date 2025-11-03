@@ -203,8 +203,6 @@ class OllamaClient:
             if not ollama_bin:
                 raise RuntimeError("'ollama' nicht gefunden. Bitte Ollama installieren und in den PATH aufnehmen.")
             parts = [ollama_bin, "serve"]
-        if not parts:
-            raise RuntimeError("OLLAMA_START_CMD ist leer – kein Startkommando definiert.")
         if parts[0] == "ollama":
             ollama_bin = shutil.which("ollama")
             if not ollama_bin:
