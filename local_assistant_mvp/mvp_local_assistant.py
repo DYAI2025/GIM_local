@@ -274,8 +274,6 @@ class OllamaClient:
         self._ensure_model_available(tags)
 
     def _start_server(self) -> None:
-        if not self.autostart:
-            raise RuntimeError("Ollama-Server nicht erreichbar (Server down). Bitte manuell starten oder OLLAMA_AUTOSTART aktivieren.")
         if self._managed_start:
             if self._server_proc and self._server_proc.poll() is None:
                 return
