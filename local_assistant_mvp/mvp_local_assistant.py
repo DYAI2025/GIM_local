@@ -238,6 +238,7 @@ class OllamaClient:
                 try:
                     self._server_proc.kill()
                 except Exception:
+                    # Ignore exceptions during forced process kill; cleanup should not fail if process is already dead or cannot be killed.
                     pass
 
     def _fetch_tags(self) -> Dict[str, Any]:
