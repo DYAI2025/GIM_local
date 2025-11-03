@@ -342,6 +342,7 @@ class OllamaClient:
             raise RuntimeError(f"Fehler: Modell '{self.model}' nicht gefunden. Bitte installieren oder OLLAMA_AUTO_PULL aktivieren.")
         if r.status_code >= 500:
             raise RuntimeError(f"Fehler: Ollama-Server meldet einen internen Fehler ({r.status_code}).")
+        r.raise_for_status()
         try:
             data = r.json()
         except ValueError as exc:
