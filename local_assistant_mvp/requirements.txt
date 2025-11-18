@@ -1,7 +1,17 @@
-faster-whisper
-sounddevice
-numpy
-webrtcvad
-requests
-pydantic
-python-dotenv
+# Core dependencies with pinned versions for reproducibility
+faster-whisper==1.2.1
+sounddevice==0.5.3
+numpy==2.3.5
+webrtcvad==2.0.10
+requests==2.32.5
+pydantic==2.12.4
+python-dotenv==1.2.1
+
+# Development dependencies (optional)
+# Uncomment for development:
+# pytest==8.3.4
+# pytest-cov==6.0.0
+# pytest-mock==3.14.0
+# black==25.1.0
+# mypy==1.15.0
+# ruff==0.9.5
