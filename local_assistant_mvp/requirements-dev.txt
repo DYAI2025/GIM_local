@@ -1,0 +1,15 @@
+# Development and testing dependencies
+-r requirements.txt
+
+# Testing
+pytest==8.3.4
+pytest-cov==6.0.0
+pytest-mock==3.14.0
+
+# Code quality
+black==25.1.0
+mypy==1.15.0
+ruff==0.9.5
+
+# Type stubs
+types-requests==2.32.0.20250102
